@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    transition: 2s;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+.text-white{
+    color: #fff !important;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+#header {
+    height: 50px;
+    background-color: #252323;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav>li{
+    display: inline-block;
+
+}
+#nav li{
+    position: relative;
+}
+#nav>li>a{
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgb(156, 154, 10);
+
+}
+#nav li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0 24px;
+    line-height: 50px;
+    display: block;
+}
+
+#nav >li:hover >a,
+#nav .subnav li:hover a{
+    color: #000;
+    background-color: rgb(208, 217, 224) ;
+}
+#nav .subnav{
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+#nav .subnav a{
+    color: #000;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+
+#header .search-btn{
+    float: right;
+    position: relative;
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .menu-icon,
+#header .search-icon{
+    float: right;
+    color: #fff;
+    line-height: 50px;
+    font-size: 1.3rem;
+    padding: 0 24px;
+    text-shadow: 0 0 10px rgb(156, 154, 10);
+}
+#header #search-place{
+    background-color: #cab6b6d2;
+    width: 16rem;
+    height: 50px;
+    box-shadow: 0 0  10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 105%;
+    right: 50%;
+    border-radius: 5px;
+    display: none;
+}
+#header #search-input{
+    width: 16rem;
+    height: 46px;
+    border: 1px solid black;
+    line-height: 66px;
+}
+.mobile-menu-btn:hover,
+#header .search-icon:hover{
+    background-color: rgb(208, 217, 224) ;
+    color: #000;
+    cursor: pointer;
+}
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background:  url('/assets/img/Dragon\ Ball\ Daima.jfif') top center /contain no-repeat;
+    position: relative;
+    opacity: 0.8;
+}
+
+#content .content-section{
+    width: 900px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px 112px 16px;
+}
+.section-heading, .section-subheading{
+    text-align: center;
+}
+.section-heading{
+    font-weight: 600;
+    letter-spacing:4px;
+    text-shadow: 0 0 10px rgb(156, 154, 10);
+}
+.section-subheading{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-style: italic;
+    opacity: 0.8;
+}
+#content .section-info{
+    text-align: justify;
+    line-height: 1.5;
+}
+#content .member-list{
+    padding-top: 48px;
+}
+#content .member-item{
+    float: left;
+    width: 33%;
+    padding-right: 15px;
+    padding-left: 18px;
+}
+#content .member-img{
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid #333;
+}
+.clear{
+    clear: both;
+}
+#content .member-name{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgb(156, 154, 10);
+    padding-bottom: 20px;
+}
+.tour-section{
+    background-color: #000;
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+.ticket-list li{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    list-style-type: none;
+}
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.ticket-list .quantity{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.place-list{
+    margin-top: 32px;
+}
+.place-item{
+    float: left;
+    width: 33.33%;
+    padding: 0 8px;
+}
+.place-item img{
+    width: 100%;
+    height: 303px;
+    display: block;
+}
+.place-item img:hover{
+    transform: rotateY(180deg) scale(1.1,1.1);
+    transition: all 1s;
+}
+.place-content{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.place-heading{
+    font-size: 17px;
+}
+.place-time{
+    padding-top: 13px;
+    color: #757575;
+}
+.place-des{
+    margin-top: 13px;
+    line-height: 1.3;
+}
+.buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+.buy-btn:hover{
+    color: #000;
+    font-weight: 600;
+    background-color: #d46e0f;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal-open{
+    display: flex;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.6s;
+}
+.modal-header{
+    background-color: #333;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 5px;
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+}
+.modal-body{
+    padding: 20px;
+}
+.modal-label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    color: #333;
+}
+#buy-ticket{
+    margin-top: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 13px;
+    cursor: pointer;
+}
+#buy-ticket:hover{
+    background-color: #000;
+    transition: 500ms;
+}
+.modal-footer .modal-help{
+    display: inline-flex;
+    padding: 13px 18px 18px;
+    float: right;
+    justify-content: space-evenly;
+}
+.modal-footer i{
+    padding: 13px 18px 18px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.modal-footer i:hover{
+    color: rgb(230, 13, 42);
+}
+.modal-open{
+    display: flex;
+}
+@keyframes modalFadeIn{
+    from{
+        opacity: 0.7;
+        transform: translateY(-180px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-content{
+    margin-top: 30px;
+    padding-bottom: 90px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.4;
+}
+.contact-info i{
+    display: inline-block;
+    width: 30px;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.row::after{
+    content: "";
+    clear: both;
+}
+.form-submit{
+    color: #fff;
+    background-color: #000;
+    border: none;
+    padding: 10px 16px;
+    float: right;
+    cursor: pointer;
+}
+.form-submit:hover{
+    opacity: 0.9;
+    transition: 0.4;
+}
+
+.map-section img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #333;
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+    color: #333;
+}
+.social{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.social a:hover{
+    opacity: 0.8;
+}
+
+@media (min-width:740px) and (max-width:1240px){
+    #header .mobile-menu-btn{
+        display: none;
+    }
+}
+
+@media (min-width:1240px){
+    #header .mobile-menu-btn{
+        display: none;
+    }
+}
+
+@media (max-width: 740px){
+    #header{
+        overflow: hidden;
+    }
+    #header .search-btn{
+        display: none;
+    }
+    #nav{
+        display: block;
+    }
+    #nav>li{
+        display: block;
+    }
+    #nav >li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+    #content .member-item{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #content .place-item{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #content .place-item img:hover{
+        transform: rotateY(180deg) scale(1.05);
+        transition: all 1s;
+    }
+    #content .contact-content{
+        width: 100%;
+    }
+    .modal .modal-container{
+        margin: 0 8px;
+    }
+}
